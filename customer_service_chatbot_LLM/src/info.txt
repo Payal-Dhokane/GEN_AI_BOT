@@ -1,0 +1,6 @@
+Name: Payal Dhokane
+Email: payaldhokane282@gmail.com
+Training: Data science Internship
+Task: Customer Service Chatbot
+GitHub Repository: https://github.com/yourusername/customer_service_chatbot
+Submission Date: 15-07-2026

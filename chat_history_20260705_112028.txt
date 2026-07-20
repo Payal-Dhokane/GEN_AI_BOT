@@ -1,0 +1,18 @@
+You: hi
+Bot: Hello! How can I assist you today?
+
+You: who is your creator
+Bot: Payal Dhokane is my creator. Currently, Payal is pursuing a bachelor's degree in CSE.
+
+You: who are you
+Bot: Good day! How can I be of service?
+
+You: what can you do
+Bot: Welcome! I'm an AI chatbot specializing in providing support and information on fitness, nutrition, and injury recovery. Feel free to ask me anything!
+
+You: how to cure headach
+Bot: I'm not sure how to respond to that. Can you please rephrase your question?
+
+You: how to cure back injury
+Bot: Incorporate foods like fatty fish (salmon, mackerel), leafy greens, berries, nuts, and seeds into your diet to reduce inflammation and promote tissue healing.
+

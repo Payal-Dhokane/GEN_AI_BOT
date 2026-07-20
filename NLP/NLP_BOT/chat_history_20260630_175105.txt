@@ -1,0 +1,12 @@
+You: hi
+Bot: Hi! How are you feeling today?
+
+You: good
+Bot: Good day! How can I be of service?
+
+You: creator?
+Bot: Good morning. I hope you had a good night's sleep. How are you feeling today? 
+
+You: who is your creator
+Bot: My creator is Payal Dhokane, who is passionate about AI and machine learning.
+

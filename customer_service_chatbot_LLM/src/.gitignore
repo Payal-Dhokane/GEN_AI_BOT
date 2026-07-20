@@ -1,0 +1,26 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+.conda/
+
+# VS Code
+.vscode/
+
+# Streamlit
+.streamlit/
+
+# FAISS Vector Database
+faiss_index/
+
+# OS Files
+.DS_Store
+Thumbs.db
