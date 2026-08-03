@@ -1,5 +1,9 @@
 import streamlit as st
-from langchain_helper import get_qa_chain, create_vector_db
+from langchain_helper import (
+    get_qa_chain,
+    create_vector_db,
+    update_vector_db,
+)
 from sentiment import analyze_sentiment
 
 
@@ -27,11 +31,40 @@ st.caption("Powered by LangChain, Gemini, FAISS & RoBERTa Sentiment Analysis")
 
 st.divider()
 
+with st.expander("📂 Update Knowledge Base", expanded=False):
+
+    uploaded_file = st.file_uploader(
+    "Upload a CSV file",
+    type=["csv"]
+)
+
+if uploaded_file is not None:
+
+    upload_path = "../dataset/uploaded_dataset.csv"
+
+    with open(upload_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+
+    if st.button("Update Knowledge Base"):
+
+        with st.spinner("Updating Knowledge Base..."):
+
+            count = update_vector_db(upload_path)
+
+        
+        if count == 0:
+            st.info("No new FAQs found. The uploaded file already exists in the knowledge base.")
+        else:
+            st.success("✅ Knowledge Base Updated Successfully!")
+            st.write(f"✔ **{count}** new FAQs added")
+            st.write("🚀 Ready to answer new questions.")
+    
+    
 # Create Knowledge Base
-if st.button("Create Knowledgebase"):
-    with st.spinner("Creating Knowledge Base..."):
+if st.button("Rebuild Knowledgebase"):
+    with st.spinner("Rebuilding Knowledge Base..."):
         create_vector_db()
-    st.success("Knowledge Base created successfully!")
+    st.success("Knowledge Base rebuilt successfully!")
 
 # User Input
 question = st.text_input("Question:")
